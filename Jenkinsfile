@@ -11,13 +11,13 @@ pipeline {
         
             stage('Compile') {
             steps {
-                sh './gradlew compileJava'
+                sh 'mvn compile'
             }
         }
-        
+
         stage('Unit test') {
             steps {
-                sh './gradlew test'
+                sh 'mvn test'
             }
         }
     }
